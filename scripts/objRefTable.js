@@ -32,13 +32,13 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.SetLayerOpacity,
 		C3.Behaviors.Tween.Exps.Value,
 		C3.Plugins.Touch.Cnds.OnTapGestureObject,
-		C3.JavaScriptInEvents.轉_Event8_Act1,
 		C3.Plugins.System.Acts.Wait,
 		C3.Plugins.System.Acts.GoToLayoutByName,
 		C3.Behaviors.Tween.Cnds.OnTweensFinished,
 		C3.Plugins.System.Cnds.CompareVar,
 		C3.Plugins.Text.Exps.Text,
 		C3.Plugins.Sprite.Acts.SetOpacity,
+		C3.JavaScriptInEvents.轉_Event17_Act1,
 		C3.Plugins.Audio.Acts.Play,
 		C3.Plugins.AdvancedRandom.Acts.CreatePermutationTable,
 		C3.Behaviors.Tween.Acts.TweenOneProperty,
@@ -101,7 +101,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Cnds.IsBoolInstanceVarSet,
 		C3.Plugins.Sprite.Acts.SetBoolInstanceVar,
 		C3.Plugins.Sprite.Acts.SetX,
-		C3.Plugins.Audio.Cnds.IsTagPlaying
+		C3.Plugins.Audio.Cnds.IsTagPlaying,
+		C3.JavaScriptInEvents.事件表1_Event1_Act1
 	];
 };
 self.C3_JsPropNameTable = [
