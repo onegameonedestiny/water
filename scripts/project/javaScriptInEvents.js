@@ -29,7 +29,7 @@ const scriptsInEvents = {
 		(async()=>{
 		  try{
 		    if(!window.liff) throw new Error('LIFF SDK 未載入');
-		    await liff.init({ liffId: 'YOUR_LIFF_ID' });
+		    await liff.init({ liffId: '2008129352-znYAkn2O' });
 		    await liff.ready;
 		    await liff.sendMessages([{ type:'text', text:'成功' }]);
 		    if(liff.isInClient()) liff.closeWindow();
@@ -47,7 +47,7 @@ const scriptsInEvents = {
 		    if (!window.liff) throw new Error("LIFF SDK 沒載入");
 		
 		    // 1️⃣ 初始化 LIFF (一定要最先做)
-		    await liff.init({ liffId: "YOUR_LIFF_ID" });
+		    await liff.init({ liffId: "2008129352-znYAkn2O" });
 		    await liff.ready;
 		
 		    // 2️⃣ （選用）檢查權限，這裡以 chat_message.write 為例
@@ -63,9 +63,6 @@ const scriptsInEvents = {
 		      });
 		    }
 		
-		    // 4️⃣ （選用）拿玩家資訊
-		    const profile = await liff.getProfile();
-		    console.log("玩家名稱:", profile.displayName);
 		
 		  } catch (e) {
 		    console.error("LIFF 初始化失敗:", e);
