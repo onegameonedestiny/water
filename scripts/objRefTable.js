@@ -46,7 +46,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Text.Cnds.CompareInstanceVar,
 		C3.Plugins.System.Exps.loopindex,
 		C3.Plugins.AdvancedRandom.Acts.ShufflePermutationTable,
-		C3.Plugins.Text.Acts.TypewriterText,
 		C3.Plugins.AdvancedRandom.Exps.Permutation,
 		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
 		C3.Plugins.Sprite.Acts.SetInstanceVar,
@@ -83,6 +82,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Arr.Exps.CurValue,
 		C3.Plugins.System.Exps.int,
 		C3.Plugins.Arr.Exps.At,
+		C3.Plugins.Audio.Acts.Stop,
+		C3.Plugins.Text.Acts.TypewriterText,
 		C3.Plugins.Sprite.Cnds.IsAnimPlaying,
 		C3.Plugins.Sprite.Acts.SetEffectParam,
 		C3.Plugins.Sprite.Acts.SetSize,
@@ -99,7 +100,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Cnds.IsBoolInstanceVarSet,
 		C3.Plugins.Sprite.Acts.SetBoolInstanceVar,
 		C3.Plugins.Sprite.Acts.SetX,
-		C3.Plugins.System.Cnds.OnLayoutEnd
+		C3.Plugins.Audio.Cnds.IsTagPlaying
 	];
 };
 self.C3_JsPropNameTable = [
@@ -148,7 +149,6 @@ self.C3_JsPropNameTable = [
 	{密碼: 0},
 	{時間: 0},
 	{成敗: 0},
-	{階段: 0},
 	{輸入: 0},
 	{間隔: 0},
 	{動畫表: 0},
@@ -158,7 +158,8 @@ self.C3_JsPropNameTable = [
 	{第幾碼: 0},
 	{血量: 0},
 	{進退: 0},
-	{監看: 0}
+	{監看: 0},
+	{階段: 0}
 ];
 
 self.InstanceType = {

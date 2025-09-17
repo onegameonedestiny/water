@@ -1354,7 +1354,7 @@ self.C3_ExpressionFuncs = [
 		},
 		() => "文字",
 		() => "https://docs.google.com/spreadsheets/d/e/2PACX-1vQzIrdzKcoYmFF3j3xMDY3zD6xFU41Y10LL-uEln8qBhijTUWrpUr6LZjJtv6VsM5WEmmJO6bqsAOah/pub?output=csv",
-		() => 5,
+		() => 4,
 		() => "黑",
 		() => 85,
 		() => 0,
@@ -1390,11 +1390,11 @@ self.C3_ExpressionFuncs = [
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0(2, 15);
 		},
-		() => 4,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0(2, 26);
 		},
+		() => 5,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0(2, 40);
@@ -1406,14 +1406,16 @@ self.C3_ExpressionFuncs = [
 		() => 50,
 		() => 0.3,
 		() => "急流",
-		() => 10,
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => (((and("在第", v0.GetValue()) + "波急流來臨前") + "\n") + "點擊各部位調成防衛式游泳");
+		},
+		() => 25,
+		() => 20,
+		() => 15,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => v0.GetValue();
-		},
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => (((and("在第", v0.GetValue()) + "急流來臨前") + "\n") + "點擊各部位調成防衛式游泳");
 		},
 		() => "急流要來了",
 		() => 0.25,
@@ -1726,6 +1728,8 @@ self.C3_ExpressionFuncs = [
 			const v4 = p._GetNode(4).GetVar();
 			return () => f0(n1.ExpObject(((v2.GetValue() + (v3.GetValue() % 2)) / 2), (8 - ((v4.GetValue() % 2) * 4))));
 		},
+		() => "選項",
+		() => 11,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => (v0.GetValue() % 2);
@@ -1777,7 +1781,7 @@ self.C3_ExpressionFuncs = [
 		() => 30,
 		() => 1360,
 		() => "請依序按身體部位",
-		() => 600,
+		() => 10,
 		() => "橫",
 		() => "直",
 		p => {
@@ -1802,9 +1806,9 @@ self.C3_ExpressionFuncs = [
 			const v2 = p._GetNode(2).GetVar();
 			return () => n0.ExpObject((v1.GetValue() + 2), v2.GetValue());
 		},
-		() => -281492157629439,
 		() => 267.3,
 		() => 504.9,
+		() => -281492157629439,
 		() => "成功",
 		() => "距離",
 		p => {
@@ -1899,7 +1903,8 @@ self.C3_ExpressionFuncs = [
 		p => {
 			const n0 = p._GetNode(0);
 			return () => (n0.ExpObject() - 10);
-		}
+		},
+		() => "背"
 ];
 
 
