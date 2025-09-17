@@ -32,6 +32,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.SetLayerOpacity,
 		C3.Behaviors.Tween.Exps.Value,
 		C3.Plugins.Touch.Cnds.OnTapGestureObject,
+		C3.JavaScriptInEvents.轉_Event8_Act1,
 		C3.Plugins.System.Acts.Wait,
 		C3.Plugins.System.Acts.GoToLayoutByName,
 		C3.Behaviors.Tween.Cnds.OnTweensFinished,
