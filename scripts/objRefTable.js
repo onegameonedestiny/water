@@ -18,6 +18,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Text.Acts.SetText,
 		C3.Plugins.Sprite.Acts.SetVisible,
 		C3.Plugins.Text.Acts.SetVisible,
+		C3.JavaScriptInEvents.轉_Event1_Act5,
 		C3.Plugins.System.Acts.SetVar,
 		C3.Plugins.Browser.Exps.QueryParam,
 		C3.Plugins.AJAX.Acts.Request,
