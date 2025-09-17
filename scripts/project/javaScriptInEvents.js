@@ -26,46 +26,25 @@ const scriptsInEvents = {
 
 	async 轉_Event17_Act1(runtime, localVars)
 	{
-		(async()=>{
-		  try{
-		    if(!window.liff) throw new Error('LIFF SDK 未載入');
-		    await liff.init({ liffId: '2008129352-znYAkn2O' });
-		    await liff.ready;
-		    await liff.sendMessages([{ type:'text', text:'成功' }]);
-		    if(liff.isInClient()) liff.closeWindow();
-		  }catch(e){
-		    console.error('sendMessages 失敗:', e);
-		    // alert('送訊息失敗：' + (e.message||e));  // 需要時可打開提示
-		  }
-		})();
+		if (window.liff && liff.isInClient()) {
+		  liff.closeWindow();
+		}
+		
 	},
 
-	async 轉_Event1_Act5(runtime, localVars)
+	async 轉_Event2_Act3(runtime, localVars)
 	{
-		(async()=>{
+		(async () => {
 		  try {
-		    if (!window.liff) throw new Error("LIFF SDK 沒載入");
+		    if (!window.liff) throw new Error('LIFF SDK 沒載入');
 		
-		    // 1️⃣ 初始化 LIFF (一定要最先做)
-		    await liff.init({ liffId: "2008129352-znYAkn2O" });
+		    // 初始化 LIFF
+		    await liff.init({ liffId: '2008129352-znYAkn2O' });
 		    await liff.ready;
 		
-		    // 2️⃣ （選用）檢查權限，這裡以 chat_message.write 為例
-		    const perm = await liff.permission.query("chat_message.write");
-		    console.log("權限狀態:", perm.state);
-		
-		    // 3️⃣ （選用）自動導向授權
-		    if (perm.state !== "granted") {
-		      // 引導玩家授權（會重新導回 redirectUri）
-		      liff.login({
-		        scope: ["openid", "chat_message.write", "profile"],
-		        redirectUri: window.location.href
-		      });
-		    }
-		
-		
+		    console.log('✅ LIFF 初始化完成');
 		  } catch (e) {
-		    console.error("LIFF 初始化失敗:", e);
+		    console.error('❌ LIFF 初始化失敗:', e);
 		  }
 		})();
 		
