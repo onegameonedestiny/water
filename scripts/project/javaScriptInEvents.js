@@ -22,32 +22,6 @@ const scriptsInEvents = {
 		  }
 		})();
 		
-	},
-
-	async 轉_Event17_Act1(runtime, localVars)
-	{
-		if (window.liff && liff.isInClient()) {
-		  liff.closeWindow();
-		}
-		
-	},
-
-	async 轉_Event2_Act3(runtime, localVars)
-	{
-		(async () => {
-		  try {
-		    if (!window.liff) throw new Error('LIFF SDK 沒載入');
-		
-		    // 初始化 LIFF
-		    await liff.init({ liffId: '2008129352-znYAkn2O' });
-		    await liff.ready;
-		
-		    console.log('✅ LIFF 初始化完成');
-		  } catch (e) {
-		    console.error('❌ LIFF 初始化失敗:', e);
-		  }
-		})();
-		
 	}
 };
 
