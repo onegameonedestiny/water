@@ -22,7 +22,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Browser.Exps.QueryParam,
 		C3.Plugins.AJAX.Acts.Request,
 		C3.Plugins.System.Cnds.IsPreview,
-		C3.JavaScriptInEvents.轉_Event4_Act1,
 		C3.Plugins.AJAX.Cnds.OnComplete,
 		C3.Behaviors.Tween.Acts.TweenValue,
 		C3.Plugins.System.Acts.SetFunctionReturnValue,
