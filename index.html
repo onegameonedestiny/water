@@ -1,86 +1,46 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>河神試煉｜遊戲入口</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+	<title>溺水</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	
+	<!-- Made with Construct, the game and app creator :: https://www.construct.net -->
+	<meta name="generator" content="Scirra Construct">
 
-  <!-- Construct 3 用 -->
-  <meta name="generator" content="Scirra Construct">
-  <link rel="manifest" href="appmanifest.json">
-  <link rel="stylesheet" href="style.css">
 
-  <!-- 加入 LINE LIFF SDK -->
-  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 
-  <script>
-  // =============================
-  // ✅ 全域變數設定
-  // =============================
-  window.liffReady = false;
-  window.liffProfile = null;
+	<link rel="manifest" href="appmanifest.json">
 
-  // ✅ 取得網址參數
-  function getQueryParam(name) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(name);
-  }
 
-  // =============================
-  // ✅ 初始化 LIFF
-  // =============================
-  async function initLiff() {
-    const liffId = getQueryParam("liff_id");
-    if (!liffId) {
-      console.warn("⚠️ 沒有 liff_id 參數，跳過 LIFF 初始化");
-      startConstruct(); // 即使沒有 LIFF 也啟動遊戲
-      return;
-    }
+	<link rel="stylesheet" href="style.css">
 
-    try {
-      console.log("🔄 正在初始化 LIFF... ID:", liffId);
-      await liff.init({ liffId });
 
-      window.liffReady = true;
-      window.liffProfile = await liff.getProfile();
-      console.log("✅ LIFF 初始化成功，使用者：", window.liffProfile.displayName);
-    } catch (err) {
-      console.error("❌ LIFF 初始化失敗：", err);
-      alert("LIFF 初始化失敗，將以一般模式開啟。\n" + err.message);
-    }
 
-    // 無論成功與否，都啟動 Construct 3 遊戲
-    startConstruct();
-  }
-
-  // =============================
-  // ✅ Construct 3 啟動
-  // =============================
-  function startConstruct() {
-    const s = document.createElement("script");
-    s.type = "module";
-    s.src = "scripts/main.js";
-    document.body.appendChild(s);
-  }
-
-  // ✅ 頁面載入後開始初始化
-  window.addEventListener("DOMContentLoaded", initLiff);
-  </script>
-</head>
-
+</head> 
+ 
 <body>
-  <noscript>
-    <div id="notSupportedWrap">
-      <h2 id="notSupportedTitle">This content requires JavaScript</h2>
-      <p class="notSupportedMessage">請啟用 JavaScript 才能執行遊戲。</p>
-    </div>
-  </noscript>
 
-  <script src="scripts/modernjscheck.js"></script>
-  <script src="scripts/supportcheck.js"></script>
-  <script src="scripts/offlineclient.js" type="module"></script>
-  <!-- 不要手動載入 main.js，會由上方 startConstruct() 控制 -->
-  <!-- <script src="scripts/main.js" type="module"></script> -->
-  <script src="scripts/register-sw.js" type="module"></script>
-</body>
+	
+
+<script>
+if (location.protocol.substr(0, 4) === "file")
+{
+	alert("Web exports won't work until you upload them. (When running on the file: protocol, browsers block many features from working for security reasons.)");
+}
+</script>
+	
+	<noscript>
+		<div id="notSupportedWrap">
+			<h2 id="notSupportedTitle">This content requires JavaScript</h2>
+			<p class="notSupportedMessage">JavaScript appears to be disabled. Please enable it to view this content.</p>
+		</div>
+	</noscript>
+	<script src="scripts/modernjscheck.js"></script>
+	<script src="scripts/supportcheck.js"></script>
+	<script src="scripts/offlineclient.js" type="module"></script>
+	<script src="scripts/main.js" type="module"></script>
+	<script src="scripts/register-sw.js" type="module"></script>
+
+</body> 
 </html>

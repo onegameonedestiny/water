@@ -22,6 +22,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Browser.Exps.QueryParam,
 		C3.Plugins.AJAX.Acts.Request,
 		C3.Plugins.System.Cnds.IsPreview,
+		C3.JavaScriptInEvents.轉_Event4_Act1,
 		C3.Plugins.AJAX.Cnds.OnComplete,
 		C3.Behaviors.Tween.Acts.TweenValue,
 		C3.Plugins.System.Acts.SetFunctionReturnValue,
@@ -94,14 +95,14 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Exps.X,
 		C3.Plugins.Sprite.Exps.Y,
 		C3.Plugins.Text.Acts.SetPos,
+		C3.Plugins.Sprite.Cnds.CompareOpacity,
 		C3.Plugins.Sprite.Acts.SetDefaultColor,
 		C3.Plugins.System.Acts.CreateObject,
 		C3.Plugins.Text.Acts.Destroy,
 		C3.Plugins.Sprite.Cnds.IsBoolInstanceVarSet,
 		C3.Plugins.Sprite.Acts.SetBoolInstanceVar,
 		C3.Plugins.Sprite.Acts.SetX,
-		C3.Plugins.Audio.Cnds.IsTagPlaying,
-		C3.JavaScriptInEvents.事件表1_Event1_Act1
+		C3.Plugins.Audio.Cnds.IsTagPlaying
 	];
 };
 self.C3_JsPropNameTable = [

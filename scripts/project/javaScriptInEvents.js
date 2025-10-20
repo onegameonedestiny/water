@@ -2,25 +2,13 @@
 
 const scriptsInEvents = {
 
-	async 事件表1_Event1_Act1(runtime, localVars)
+	async 轉_Event4_Act1(runtime, localVars)
 	{
-		(async()=>{
-		  try{
-		    if(!window.liff) throw new Error('LIFF SDK 未載入');
-		    await liff.init({ liffId: 'YOUR_LIFF_ID' });
-		    await liff.ready;
-		
-		    // ⬇️ 第一步：傳送訊息（以使用者本人身分發到聊天室）
-		    await liff.sendMessages([
-		      { type:'text', text:'成功' }
-		    ]);
-		
-		    // ⬇️ 第二步：傳送成功後，關閉 LIFF 視窗
-		    if(liff.isInClient()) liff.closeWindow();
-		  }catch(e){
-		    console.error('sendMessages 失敗:', e);
-		  }
-		})();
+		if (window.liffReady && window.liff.isInClient()) {
+		  window.liff.closeWindow();
+		} else {
+		  alert("非 LINE App 環境，無法關閉視窗");
+		}
 		
 	}
 };

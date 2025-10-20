@@ -1354,10 +1354,11 @@ self.C3_ExpressionFuncs = [
 		},
 		() => "文字",
 		() => "https://docs.google.com/spreadsheets/d/e/2PACX-1vQzIrdzKcoYmFF3j3xMDY3zD6xFU41Y10LL-uEln8qBhijTUWrpUr6LZjJtv6VsM5WEmmJO6bqsAOah/pub?output=csv",
-		() => 2,
+		() => 5,
 		() => "黑",
 		() => 85,
 		() => 0,
+		() => 2,
 		() => 1,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
@@ -1394,7 +1395,6 @@ self.C3_ExpressionFuncs = [
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0(2, 26);
 		},
-		() => 5,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0(2, 40);
